@@ -46,12 +46,12 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
   Serial.println();
   //if ((char)payload[0] == '1') {
-
+  
+  //重置计数
+  count = 0;
   digitalWrite(BUILTIN_LED, LOW);//点亮LED
-  delay(1000);
+  delay(500);
   digitalWrite(BUILTIN_LED, HIGH);//熄灭LED
-   //重置计数
-   count = 0;
 }
 //重连
 void reconnect() {
