@@ -1,5 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
+
 // esp8266 mqtt + pir count
 // 网络配置
 const char* ssid = "OpenWrt-2.4";
@@ -11,7 +12,7 @@ PubSubClient client(espClient);
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE  (5120)
 char msg[MSG_BUFFER_SIZE];
-char count = 0;
+int count = 0;
 int pirGPIO = 13; //esp8266 GPIO D7
 void setup_wifi() {
 
